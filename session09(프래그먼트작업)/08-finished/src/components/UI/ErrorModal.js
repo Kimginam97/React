@@ -6,7 +6,7 @@ import Button from './Button';
 import classes from './ErrorModal.module.css';
 
 const Backdrop = (props) => {
-    return <div className={classes.backdrop} onCLick={props.onConfirm}></div>;
+    return <div className={classes.backdrop} onClick={props.onConfirm}></div>;
 };
 
 const ModalOverlay = (props) => {
@@ -29,7 +29,7 @@ const ErrorModal = (props) => {
     return (
         <React.Fragment>
             {ReactDOM.createPortal(
-                <Backdrop onConfirm={props.onConfirm} />,
+                <Backdrop onClick={props.onConfirm} />,
                 document.getElementById('backdrop-root')
             )}
             {ReactDOM.createPortal(
