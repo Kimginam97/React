@@ -16,4 +16,5 @@ const Button = (props) => {
   );
 };
 
+// https://academind.com/tutorials/reference-vs-primitive-values
 export default React.memo(Button);
